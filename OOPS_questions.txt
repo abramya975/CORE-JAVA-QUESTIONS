@@ -1,0 +1,20 @@
+1. What are the four pillars of Object-Oriented Programming in Java?
+2. What is the difference between a class and an object?
+3. What is encapsulation in Java?
+4. What is method overloading?
+5. What is method overriding?
+6. What does the final keyword do in Java?
+7. What is an abstract method?
+8. What is the purpose of the this keyword?
+9. What is upcasting?
+10. Can constructors be inherited? Why or why not?
+11. What is abstraction and how is it implemented in Java?
+12. How does runtime polymorphism (dynamic method dispatch) work?
+13. What is the difference between an abstract class and an interface?
+14. What are different types of inner classes in Java and why do we use them?
+15. What is composition? Why is it preferred over inheritance in some cases?
+16. How do the equals() and hashCode() methods work together?
+17. What is the significance of polymorphism in designing flexible software?
+18. What is downcasting? When can it cause a runtime exception?
+19. Why don't static methods participate in runtime polymorphism?
+20. What is an immutable class and what steps are required to create one?

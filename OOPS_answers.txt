@@ -1,0 +1,89 @@
+1) What is an object in Java?
+An object is a runtime instance of a class.
+It contains state (variables) and behavior (methods).
+
+2) What is encapsulation?
+Encapsulation bundles data and methods together.
+It restricts direct access using private fields and public getters/setters.
+
+3) Why is inheritance useful?
+It allows code reuse by enabling a child class to use parent class features.
+This reduces duplication and improves maintainability.
+
+4) What is method overloading?
+Overloading means multiple methods with the same name but different parameters.
+It happens at compile time (compile‑time polymorphism).
+
+5) What is method overriding?
+Overriding redefines a parent class method in a child class.
+It enables runtime polymorphism.
+
+6) What is an abstract method?
+A method declared without a body.
+It must be implemented by subclasses.
+
+7) Can we create objects of an interface?
+No, interfaces cannot be instantiated.
+They must be implemented by a class.
+
+8) What is upcasting?
+Assigning a subclass object to a parent class reference.
+It is always safe and implicit.
+
+9) What does the final keyword do?
+final variables cannot be reassigned, methods cannot be overridden, classes cannot be extended.
+It helps enforce immutability and restriction.
+
+10) Can constructors be overridden?
+No, constructors are not inherited.
+They can only be overloaded within the same class.
+
+11) What is abstraction and how is it achieved in Java?
+Abstraction hides internal implementation and exposes only necessary details.
+In Java, it is achieved using abstract classes and interfaces.
+Abstract classes allow partial abstraction, while interfaces provide full abstraction.
+
+12) How does dynamic method dispatch work?
+Dynamic dispatch resolves overridden method calls at runtime.
+The actual object type—not the reference type—decides which method executes.
+This is the foundation of runtime polymorphism in Java.
+
+13) What is the difference between an abstract class and an interface?
+Abstract classes can have constructors, fields, and both concrete/abstract methods.
+Interfaces contain abstract methods by default but can also have default/static methods.
+Interfaces support multiple inheritance; abstract classes do not.
+
+14) What are inner classes and why are they used?
+Inner classes are classes defined within another class.
+They access outer class members and are useful for grouping logically related classes.
+Common types include member, static nested, local, and anonymous.
+
+15) What is composition and why is it preferred over inheritance?
+Composition is a “has‑a” relationship where one class contains another.
+It offers more flexibility and less coupling than inheritance.
+Changes in composed classes do not break parent classes, improving maintainability.
+
+16) How do equals() and hashCode() work together?
+These methods determine logical equality of objects.
+If two objects are equal, their hashCode must also be equal.
+This is crucial for hashing‑based collections like HashMap or HashSet.
+
+17) What is the purpose of polymorphism in OOP?
+Polymorphism allows the same method call to behave differently based on object type.
+It enables cleaner, extendable designs and reduces the need for explicit conditions.
+Achieved through method overriding and method overloading.
+
+18) What is downcasting and what risks does it carry?
+Downcasting converts a parent class reference to a child class type.
+It is not always safe and may throw ClassCastException.
+To avoid issues, use instanceof before downcasting.
+
+19) How do static methods differ from instance methods in OOP?
+Static methods belong to the class, not objects.
+They cannot access instance variables directly and do not participate in polymorphism.
+Instance methods depend on object state and can be overridden.
+
+20) What is an immutable class and how do you create one?
+An immutable class' state cannot change after creation.
+Use private final fields, no setters, and return defensive copies for mutable objects.
+Examples include String and wrapper classes.
