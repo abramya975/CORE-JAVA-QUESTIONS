@@ -1,0 +1,45 @@
+1. Q: Does finally always run, and what if it has return?
+
+
+
+2. Difference between throws and throw?
+
+
+
+3. When should you create a checked vs unchecked custom exception?
+
+
+
+4. Difference between ClassNotFoundException and NoClassDefFoundError?
+
+
+
+5. When would you call initCause and what are its constraints?
+
+
+6. Exception translation vs chaining?
+
+
+
+7. In try-with-resources, what if only close() throws?
+
+
+
+8. How do finally and return interact?
+
+
+
+9. Best practice for handling InterruptedException?
+
+
+
+10. Why use UncheckedIOException?
+
+
+
+11. How do exceptions propagate from lambdas in (parallel) streams?
+
+
+
+12. What should a public API throws list look like?
+
