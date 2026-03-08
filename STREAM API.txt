@@ -1,0 +1,32 @@
+STREAM API :
+
+1.What is Stream API in Java?
+->	Stream API, introduced in Java 8, is used to process collections of data in a functional and declarative way. Instead of writing loops, developers can use operations like filter, map, and reduce to process data more clearly. Streams do not store data, they only process elements from a source such as a list or set.
+
+2.How is a Stream different from a Collection?
+->	A Collection is primarily used to store and manage data in memory, whereas a Stream is used to process data. Streams do not store elements; instead, they perform operations on elements from a source such as a list, array, or set. Another important difference is that streams support functional-style operations like filtering, mapping, and reducing. Also, streams do not modify the original collection, which helps maintain immutability and avoids side effects.
+
+3..How can you sort elements in a collection using Stream API?
+->	The Stream API provides the sorted() operation, which allows developers to arrange elements in either natural order or a custom order. The natural order works automatically for objects that implement the Comparable interface, while custom sorting can be done using a comparator.
+
+4.How does the map() operation transform data in a stream?
+->	The map() operation is used to transform each element in a stream into another form. It applies a function to each element and returns a new stream containing the transformed values. For example, a stream of lowercase strings can be converted to uppercase using map(). This operation is widely used when data needs to be modified or converted before further processing, making stream pipelines more expressive and flexible.
+
+5.Why are streams considered lazy in Java?
+->	Streams are considered lazy because intermediate operations are not executed immediately when they are called. Instead, they are only executed when a terminal operation is invoked. This behavior improves performance because the stream processes elements only when necessary and avoids unnecessary computation. Lazy evaluation also allows multiple operations to be combined efficiently into a single pipeline, reducing the number of iterations over the data.
+
+6.What are intermediate operations and terminal operations in Stream API?
+->	Stream operations are categorized into intermediate operations and terminal operations. Intermediate operations transform a stream into another stream and are executed lazily, meaning they are not actually performed until a terminal operation is invoked. Examples include filter(), map(), and sorted(). Terminal operations, on the other hand, produce a result or a side effect such as printing elements or collecting them into a collection. Examples include forEach(), collect(), and count(). Without a terminal operation, intermediate operations will not execute.
+
+7.What role does the filter() operation play in Stream processing?
+->	The filter() operation is used to select elements from a stream based on a given condition. It takes a predicate [boolean condition] and returns a new stream containing only the elements that satisfy that condition. This is particularly useful when working with large collections where only certain elements need to be processed further. By using filter(), developers can create clear and concise data-processing pipelines instead of writing complex conditional loops.
+
+8.Why is the collect() method important in Stream API?
+->	The collect() method is a terminal operation used to convert the processed stream back into a data structure, such as a List, Set, or Map. Since streams themselves do not store elements, the collect() method allows the results of stream operations to be stored for later use. It is commonly used along with Collectors utility methods like toList(), toSet(), or groupingBy() to gather the processed elements into a structured form.
+
+9.How would you remove duplicate elements from a list using Stream API?
+->	In real applications, data collections may contain duplicate values. The Stream API provides a distinct() method that helps remove duplicates by returning only unique elements from the stream. Internally, it uses the equals() method to determine uniqueness. This approach is cleaner compared to manually checking duplicates using loops or sets.
+
+10.What is the purpose of parallel streams and when should they be used?
+->	Parallel streams allow stream operations to be executed concurrently using multiple threads, which can improve performance when processing large datasets. By simply converting a stream to a parallel stream, the workload can be distributed across multiple CPU cores. However, parallel streams should be used carefully because they may introduce overhead and are not always beneficial for small datasets or operations that depend on order or shared resources.
+
