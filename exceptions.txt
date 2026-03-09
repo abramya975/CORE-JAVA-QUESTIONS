@@ -1,0 +1,33 @@
+1. The Thread vs. Runnable Debate
+In Java, you can create a thread by extending the Thread class or implementing the Runnable interface. Why is implementing Runnable almost always considered the superior architectural choice?
+
+2. The Memory Visibility Problem
+In Java, every thread has its own local cache. If Thread A updates a variable, Thread B might not see that change immediately. How does the volatile keyword solve this, and what is the "Happens-Before" relationship?
+
+3. Understanding synchronized
+When you mark a method as synchronized in Java, what exactly is the Intrinsic Lock (Monitor)? If you have two different synchronized methods in the same class, can two different threads execute them simultaneously on the same object instance?
+
+4. Wait, Notify, and NotifyAll
+These methods belong to the Object class, not the Thread class.
+
+Why must they be called from within a synchronized block?
+
+Why is notifyAll() generally safer than notify()?
+
+5. The Power of ExecutorService
+Why should you avoid manually calling new Thread().start() in a production-level Spring or enterprise application? Explain how a FixedThreadPool manages resources differently than a CachedThreadPool.
+
+6. Optimistic Locking: AtomicInteger
+Java’s Atomic classes use CAS (Compare-And-Swap). How does CAS allow for thread-safety without the performance overhead of "heavyweight" locks (like synchronized)?
+
+7. ThreadLocal: The "Solo" Variable
+What is the use case for ThreadLocal<T>? How does it allow a variable to be "global" to a thread but "private" from all other threads? (Hint: Think about database connections or user sessions).
+
+8. ReentrantLock vs. synchronized
+Java 5 introduced ReentrantLock. Name three features it provides that the standard synchronized block does not. (Think about timeouts, fairness, and interruption).
+
+9. The Deadly "Diamond" of Deadlocks
+Write a tiny snippet of Java code (or describe the logic) that would guarantee a deadlock between two threads using two String objects as locks. How can Lock Ordering prevent this?
+
+10. CompletableFuture and Non-blocking Logic
+Introduced in Java 8, CompletableFuture changed the game for asynchronous programming. How does it differ from a standard Future<T>, and how do you "chain" tasks so that Task B only starts when Task A successfully finishes?
