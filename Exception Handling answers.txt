@@ -1,0 +1,34 @@
+1 A: finally runs unless JVM aborts (System.exit, crash); a return in finally overrides earlier returns/throws (avoid it).
+
+
+2. A: throws declares potential exceptions in a method signature; throw actually throws an exception instance.
+
+
+3. A: Checked for recoverable, caller-actionable conditions; unchecked for programming/usage errors (preconditions).
+
+
+4. A: ClassNotFoundException (checked) when class can’t be located at runtime; NoClassDefFoundError (error) when a class present at compile time can’t be loaded at runtime.
+
+
+5. A: Use when constructor lacks a cause parameter; can be called once, not with null or self-cause, else IllegalStateException/IAE.
+
+
+6. A: Translate to a higher-level type meaningful to callers; chain by passing the original cause to preserve diagnostics.
+
+
+7. A: The close() exception becomes the primary thrown exception.
+
+
+8. A: The return value is computed before finally; changes to locals in finally don’t alter the returned value (but mutating returned objects still affects them).
+
+
+9. A: Catch, restore the interrupt flag (Thread.currentThread().interrupt()), and either propagate or exit promptly.
+
+
+10. A: To wrap IOException as unchecked in APIs/lambdas that don’t allow checked exceptions.
+
+
+11. A: Lambdas can throw unchecked exceptions which propagate to the caller; checked ones must be wrapped/translated by you.
+
+
+12. A: Declare specific, stable checked types; avoid throws Exception—it weakens contracts and burdens callers.
